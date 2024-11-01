@@ -35,4 +35,12 @@ return [
         ],
     ],
 
+    'python_api' => [
+        'endpoints' => [
+            'embed_video' => fn($videoId) => str_replace('{video_id}', $videoId, env('PYTHON_API_EMBEDDING_ENDPOINT')),
+            'chat' => fn($namespace) =>  str_replace('{namespace_id}', $namespace, env('PYTHON_API_CHAT_ENDPOINT')),
+        ],
+        'key' => env('PYTHON_API_KEY'),
+    ]
+
 ];

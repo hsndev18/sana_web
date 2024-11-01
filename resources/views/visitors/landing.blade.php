@@ -22,23 +22,19 @@
                                 </span>
                             </span> AI Hack
                         </h1>
-                        <p class="description">Unleash Brainwave's AI potential. Use the open AI <br> conversation app
-                            Pixcels Themes</p>
-                        <div class="form-group">
-                            <textarea name="text" id="slider-text-area" cols="30" rows="2"
-                                placeholder="Enter a prompt, for example: a fundraising deck to a mobile finance app called Intuitive"></textarea>
-                            <a class="btn-default @@btnClass" href="{{ route('video') }}">Start with SANA</a>
-                        </div>
-                        <div class="inner-shape">
-                            <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-one.png') }}" alt="Icon Shape"
-                                class="iconshape iconshape-one">
-                            <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-two.png') }}" alt="Icon Shape"
-                                class="iconshape iconshape-two">
-                            <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-three.png') }}" alt="Icon Shape"
-                                class="iconshape iconshape-three">
-                            <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-four.png') }}" alt="Icon Shape"
-                                class="iconshape iconshape-four">
-                        </div>
+                        {{-- SEND VIDEO --}}
+                        <livewire:visitors.video.create>
+                        {{-- END SEND VIDEO --}}
+                            <div class="inner-shape">
+                                <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-one.png') }}" alt="Icon Shape"
+                                    class="iconshape iconshape-one">
+                                <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-two.png') }}" alt="Icon Shape"
+                                    class="iconshape iconshape-two">
+                                <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-three.png') }}" alt="Icon Shape"
+                                    class="iconshape iconshape-three">
+                                <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-four.png') }}" alt="Icon Shape"
+                                    class="iconshape iconshape-four">
+                            </div>
                     </div>
                 </div>
                 <div class="col-lg-11 col-xl-11 justify-content-center">

@@ -6,7 +6,7 @@
                           <div class="rbt-default-sidebar-wrapper">
                               <nav class="mainmenu-nav">
                                   <ul class="dashboard-mainmenu rbt-default-sidebar-list">
-                                      <li><a href="{{ route('video') }}"><img
+                                      <li><a href="#"><img
                                                   src="{{ asset('assets/images/generator-icon/text.png') }}"
                                                   alt="AI Generator"><span>Text Generator</span></a></li>
                                       <li><a href="image-generator.html"><img
