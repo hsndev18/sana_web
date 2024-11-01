@@ -1,4 +1,4 @@
-@extends('visitors.layouts.master')
+@extends('visitors.main_layouts.master')
 
 @section('title', __('الرئيسية'))
 
@@ -27,7 +27,7 @@
                         <div class="form-group">
                             <textarea name="text" id="slider-text-area" cols="30" rows="2"
                                 placeholder="Enter a prompt, for example: a fundraising deck to a mobile finance app called Intuitive"></textarea>
-                            <a class="btn-default @@btnClass" href="text-generator.html">Start with AI</a>
+                            <a class="btn-default @@btnClass" href="{{ route('video') }}">Start with SANA</a>
                         </div>
                         <div class="inner-shape">
                             <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-one.png') }}" alt="Icon Shape"
