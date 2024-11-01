@@ -6,9 +6,15 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "barryvdh/laravel-debugbar": "^3.14",
+        "beyondcode/laravel-query-detector": "^2.0",
+        "guzzlehttp/guzzle": "^7.9",
+        "jantinnerezo/livewire-alert": "^3.0",
         "laravel/framework": "^11.9",
+        "laravel/horizon": "^5.29",
         "laravel/tinker": "^2.9",
-        "laravel/ui": "^4.5"
+        "laravel/ui": "^4.5",
+        "livewire/livewire": "^3.5"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
