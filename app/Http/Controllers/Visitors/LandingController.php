@@ -18,6 +18,10 @@ class LandingController extends Controller
         return view('visitors.chat', compact('videoId', 'chatUuid'));
     }
 
+    public function showSnaps($videoId)
+    {
+        return view('visitors.snaps', compact('videoId'));
+    }
 
     public function showChatLoading($videoId)
     {

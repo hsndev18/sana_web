@@ -13,7 +13,6 @@ class Loading extends Component
     public function mount($videoId)
     {
         $this->videoId = $videoId;
- 
     }
 
     public function render()
@@ -25,14 +24,14 @@ class Loading extends Component
     {
         $video = Video::where('id', $this->videoId)->first();
         if ($video->status->isCompleted()) {
-            $chat = Chat::firstOrCreate([
-                'chatable_type' => Video::class,
-                'chatable_id' => $video->id,
-            ], [
-                'chatable_type' => Video::class,
-                'chatable_id' => $video->id,
-                'session_id' => session()->getId(),
-            ]);
+            $chat = Chat::firstOrCreate(
+                [
+                    'chatable_type' => Video::class,
+                    'chatable_id' => $video->id,
+                    'session_id' => session()->getId(),
+                ]
+            );
+
             return redirect()->route('chat.show', [$video->id, $chat->uuid]);
         }
     }

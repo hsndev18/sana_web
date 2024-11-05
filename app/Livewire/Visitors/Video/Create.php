@@ -38,20 +38,22 @@ class Create extends Component
 
             $video = Video::query()->updateOrCreate([
                 'video_id' => $videoId,
-            ],[
+            ], [
                 'status' => VideoStatus::PENDING
             ]);
 
             dispatch(new EmbeddingVideo($videoId));
         } elseif ($video->status->isCompleted()) {
-            $chat = Chat::firstOrCreate([
-                'chatable_type' => Video::class,
-                'chatable_id' => $video->id,
-            ], [
-                'chatable_type' => Video::class,
-                'chatable_id' => $video->id,
-                'session_id' => session()->getId(),
-            ]);
+
+            $chat = Chat::firstOrCreate(
+                [
+                    'chatable_type' => Video::class,
+                    'chatable_id' => $video->id,
+                    'session_id' => session()->getId(),
+                ]
+            );
+
+    
 
             $this->alert('success', 'تم إضافة الفيديو بنجاح', [
                 'position' =>  'center',
