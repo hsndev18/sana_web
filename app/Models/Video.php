@@ -61,5 +61,9 @@ class Video extends Model
     {
         return $this->morphMany(Snap::class, 'snapable');
     }
-   
+
+    public function questions()
+    {
+        return $this->morphMany(Question::class, 'questionable');
+    }
 }

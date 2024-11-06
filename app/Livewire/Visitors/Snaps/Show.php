@@ -23,12 +23,6 @@ class Show extends Component
         $this->video = Video::where('id', $videoId)->first();
 
         $this->snaps = $this->video->summaries;
-        dd($this->snaps);
-
 
     }
-
-
-
-
 }

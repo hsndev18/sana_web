@@ -8,20 +8,20 @@
                                   <ul class="dashboard-mainmenu rbt-default-sidebar-list">
                                       @php
                                           $videoId = request()->route('videoId');
-                                          $chatUuid = request()->route('chatUuid');
-
+                                          $chatUuid = request()->route('chatUuid') ?? session('chat_uuid');
                                       @endphp
-                                      {{-- {{ route('chat.show', ['videoId' => $videoId, 'chatUuid' => $chatUuid]) }} --}}
-                                      <li><a href=""><img
+
+                                      <li><a
+                                              href="{{ route('chat.show', ['videoId' => $videoId, 'chatUuid' => $chatUuid]) }}"><img
                                                   src="{{ asset('assets/images/generator-icon/text.png') }}"
                                                   alt="AI Generator"><span>إسأل سنا</span></a></li>
-                                      <li><a href="#"><img
+                                      <li><a href="{{ route('snaps.show', ['videoId' => $videoId]) }}"><img
+                                                  src="{{ asset('assets/images/generator-icon/code-editor.png') }}"
+                                                  alt="AI Generator"><span>ملخصات</span></a></li>
+                                      <li><a href=""><img
                                                   src="{{ asset('assets/images/generator-icon/photo.png') }}"
                                                   alt="AI Generator"><span>إختبر فهمك</span>
                                           </a></li>
-                                      <li><a href="#"><img
-                                                  src="{{ asset('assets/images/generator-icon/code-editor.png') }}"
-                                                  alt="AI Generator"><span>ملخصات</span></a></li>
                                       {{-- <li><a href=""><img
                                                   src="{{ asset('assets/images/generator-icon/photo.png') }}"
                                                   alt="AI Generator"><span>Image Editor</span></a></li>
