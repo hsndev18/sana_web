@@ -17,12 +17,8 @@ class Loading extends Component
 
     public function render()
     {
-        return view('livewire.visitors.video.loading');
-    }
 
-    public function checkVideoStatus()
-    {
-        $video = Video::where('id', $this->videoId)->first();
+        $video = Video::find($this->videoId);
         if ($video->status->isCompleted()) {
             $chat = Chat::firstOrCreate(
                 [
@@ -34,5 +30,6 @@ class Loading extends Component
 
             return redirect()->route('chat.show', [$video->id, $chat->uuid]);
         }
+        return view('livewire.visitors.video.loading', compact('video'));
     }
 }

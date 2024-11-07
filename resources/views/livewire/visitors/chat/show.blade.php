@@ -79,11 +79,11 @@
         <div class="rbt-static-bar">
             <div class="new-chat-form border-gradient">
                 <textarea id="txtarea" rows="1" placeholder="Send a message..." wire:model="question"
-                    wire:loading.attr="disabled" id="user_message"></textarea>
+                    wire:loading.attr="disabled" id="user_message" wire:keydown.enter="sendMessage()"></textarea>
 
                 <div class="right-icons">
                     <a class="form-icon icon-send" wire:loading.attr="disabled" id="sendBtn"
-                        wire:click="sendMessage()" data-bs-placement="top">
+                        wire:click="sendMessage()"  data-bs-placement="top">
                         <i class="fa-sharp fa-solid fa-paper-plane-top"></i>
                     </a>
                 </div>
