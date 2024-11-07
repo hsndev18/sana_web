@@ -233,6 +233,7 @@
                                 <div class="content">
                                     <ul class="rainbow-meta-list">
                                         <li class="catagory-meta"><a href="#">أستاذ مساعد في الذكاء الاصطناعي</a></li>
+                                        <li class="catagory-meta"><a href="#">رئيس قسم علوم الحاسب</a></li>
                                     </ul>
                                     <h4 class="title"><a href="#">د. عيد البلوي</a></h4>
                                     <a class="btn-read-more border-transparent" href="#">
