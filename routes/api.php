@@ -14,4 +14,8 @@ use App\Http\Controllers\Api\VideoController;
 |
 */
 
-Route::patch('/videos/{video}/status', [VideoController::class, 'updateStatus'])->name('videos.status.update');
+Route::post('/videos/{video}/status', [VideoController::class, 'updateStatus'])->name('videos.status.update');
+
+
+Route::post('/snaps', [VideoController::class, 'storeSnaps'])->name('videos.snaps.store');
+Route::post('/questions/store', [VideoController::class, 'storeQuestions'])->name('videos.questions.store');

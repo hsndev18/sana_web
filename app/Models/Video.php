@@ -55,4 +55,15 @@ class Video extends Model
     {
         return $query->whereNot('status', VideoStatus::COMPLETED);
     }
+
+    // morph with snaps
+    public function summaries(): MorphMany
+    {
+        return $this->morphMany(Snap::class, 'snapable');
+    }
+
+    public function questions()
+    {
+        return $this->morphMany(Question::class, 'questionable');
+    }
 }

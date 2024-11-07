@@ -39,6 +39,8 @@ return [
         'endpoints' => [
             'embed_video' => fn($videoId) => str_replace('{video_id}', $videoId, env('PYTHON_API_EMBEDDING_ENDPOINT')),
             'chat' => fn($namespace) =>  str_replace('{namespace_id}', $namespace, env('PYTHON_API_CHAT_ENDPOINT')),
+            'generate_snap' => fn() => env('PYTHON_API_SNAP_GENERATE_ENDPOINT'),
+            'generate_exam' => fn() => env('PYTHON_API_EXAM_GENERATE_ENDPOINT'),
         ],
         'key' => env('PYTHON_API_KEY'),
     ]

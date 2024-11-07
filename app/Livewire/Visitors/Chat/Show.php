@@ -25,7 +25,6 @@ class Show extends Component
         $this->chatUuid = $chatUuid;
 
         $this->video = Video::where('id', $videoId)->first();
-
     }
 
     public function render()
@@ -49,8 +48,7 @@ class Show extends Component
         $sessionId = session()->getId();
 
         $chat = Chat::where('uuid', $this->chatUuid)->first();
-
-
+        
         abort_if(!$chat, 403);
         abort_if($chat->session_id !== $sessionId, 403);
         abort_if($chat->chatable->id != $this->videoId, 403);
@@ -66,19 +64,18 @@ class Show extends Component
     public function getResponse()
     {
         $chat = Chat::find($this->chatUuid);
-  
-        $sessionId = session()->getId();
 
+        $sessionId = session()->getId();
+        
         abort_if(!$chat, 403);
         abort_if($chat->session_id !== $sessionId, 403);
         abort_if($chat->chatable->id != $this->videoId, 403);
-
         $message = $chat->messages()->latest()->first();
-  
+
         abort_if($message->is_ai, 403);
 
         $chatEndpoint = config('services.python_api.endpoints.chat')($chat->chatable->video_id);
-     
+
         try {
 
             $response = Http::asMultipart()
@@ -93,7 +90,7 @@ class Show extends Component
                     'session_id' => $sessionId,
                     'is_ai' => true,
                 ]);
-       
+
                 $this->dispatch('responseRetrieved', $response['message']);
             } else {
                 $chat->messages()->create([
@@ -110,7 +107,6 @@ class Show extends Component
                 'is_ai' => true,
             ]);
         }
-
     }
 
     public function destroySession()
