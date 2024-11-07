@@ -28,7 +28,7 @@ class Loading extends Component
                 ]
             );
 
-            return redirect()->route('chat.show', [$video->id, $chat->uuid]);
+            $this->redirect(route('chat.show', [$video->id, $chat->uuid]));
         }
         return view('livewire.visitors.video.loading', compact('video'));
     }
