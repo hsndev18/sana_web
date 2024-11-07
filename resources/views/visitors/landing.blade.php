@@ -11,34 +11,30 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="inner text-center mt--140">
-                        <h1 class="title display-one">Examine the Potential of
+                        <h1 class="title display-one">تطبيق سنا لتسهيل التعليم
                             <br> <span class="header-caption">
                                 <span class="cd-headline rotate-1">
                                     <span class="cd-words-wrapper" style="width: 221px;">
-                                        <b class="theme-gradient is-visible">AI Chating</b>
-                                        <b class="theme-gradient is-hidden">AI Writing</b>
-                                        <b class="theme-gradient is-hidden">AI Chating</b>
+                                        <b class="theme-gradient is-visible">إسأل سنا</b>
+                                        <b class="theme-gradient is-hidden">ملخصات سنا</b>
+                                        <b class="theme-gradient is-hidden">اختبر فهمك</b>
                                     </span>
                                 </span>
-                            </span> AI Hack
+                            </span> باستخدام نموذج علام اللغوي
                         </h1>
-                        <p class="description">Unleash Brainwave's AI potential. Use the open AI <br> conversation app
-                            Pixcels Themes</p>
-                        <div class="form-group">
-                            <textarea name="text" id="slider-text-area" cols="30" rows="2"
-                                placeholder="Enter a prompt, for example: a fundraising deck to a mobile finance app called Intuitive"></textarea>
-                            <a class="btn-default @@btnClass" href="{{ route('video') }}">Start with SANA</a>
-                        </div>
-                        <div class="inner-shape">
-                            <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-one.png') }}" alt="Icon Shape"
-                                class="iconshape iconshape-one">
-                            <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-two.png') }}" alt="Icon Shape"
-                                class="iconshape iconshape-two">
-                            <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-three.png') }}" alt="Icon Shape"
-                                class="iconshape iconshape-three">
-                            <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-four.png') }}" alt="Icon Shape"
-                                class="iconshape iconshape-four">
-                        </div>
+                        {{-- SEND VIDEO --}}
+                        <livewire:visitors.video.create>
+                        {{-- END SEND VIDEO --}}
+                            <div class="inner-shape">
+                                <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-one.png') }}" alt="Icon Shape"
+                                    class="iconshape iconshape-one">
+                                <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-two.png') }}" alt="Icon Shape"
+                                    class="iconshape iconshape-two">
+                                <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-three.png') }}" alt="Icon Shape"
+                                    class="iconshape iconshape-three">
+                                <img src="{{ asset('assets/images/bg/icon-shape/icon-shape-four.png') }}" alt="Icon Shape"
+                                    class="iconshape iconshape-four">
+                            </div>
                     </div>
                 </div>
                 <div class="col-lg-11 col-xl-11 justify-content-center">
@@ -57,7 +53,7 @@
     <!-- End Slider Area  -->
 
     <!-- Start Brand Area -->
-    <div class="rainbow-brand-area rainbow-section-gap">
+    {{-- <div class="rainbow-brand-area rainbow-section-gap">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -67,38 +63,9 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12 mt--10">
-                    <ul class="brand-list brand-style-2 slider-brand slider-brand-activation">
-                        <li class="slide-single-layout"><a href="index.html#"><img
-                                    src="{{ asset('assets/images/brand/strapi.png') }}" alt="Brand Image"></a></li>
-                        <li class="slide-single-layout"><a href="index.html#"><img
-                                    src="{{ asset('assets/images/brand/mapbox.png') }}" alt="Brand Image"></a></li>
-                        <li class="slide-single-layout"><a href="index.html#"><img
-                                    src="{{ asset('assets/images/brand/stenciljs.png') }}" alt="Brand Image"></a></li>
-                        <li class="slide-single-layout"><a href="index.html#"><img
-                                    src="{{ asset('assets/images/brand/spotify.png') }}" alt="Brand Image"></a></li>
-                        <li class="slide-single-layout"><a href="index.html#"><img
-                                    src="{{ asset('assets/images/brand/woocommerce.png') }}" alt="Brand Image"></a></li>
-                        <li class="slide-single-layout"><a href="index.html#"><img
-                                    src="{{ asset('assets/images/brand/slack.png') }}" alt="Brand Image"></a></li>
-                        <li class="slide-single-layout"><a href="index.html#"><img
-                                    src="{{ asset('assets/images/brand/strapi.png') }}" alt="Brand Image"></a></li>
-                        <li class="slide-single-layout"><a href="index.html#"><img
-                                    src="{{ asset('assets/images/brand/mapbox.png') }}" alt="Brand Image"></a></li>
-                        <li class="slide-single-layout"><a href="index.html#"><img
-                                    src="{{ asset('assets/images/brand/stenciljs.png') }}" alt="Brand Image"></a></li>
-                        <li class="slide-single-layout"><a href="index.html#"><img
-                                    src="{{ asset('assets/images/brand/spotify.png') }}" alt="Brand Image"></a></li>
-                        <li class="slide-single-layout"><a href="index.html#"><img
-                                    src="{{ asset('assets/images/brand/woocommerce.png') }}" alt="Brand Image"></a></li>
-                        <li class="slide-single-layout"><a href="index.html#"><img
-                                    src="{{ asset('assets/images/brand/slack.png') }}" alt="Brand Image"></a></li>
-                    </ul>
-                </div>
-            </div>
+         
         </div>
-    </div>
+    </div> --}}
 
     <!-- Start Tab__Style--one Area  -->
     <div class="rainbow-service-area rainbow-section-gap">

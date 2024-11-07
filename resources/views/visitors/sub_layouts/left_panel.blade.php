@@ -6,18 +6,23 @@
                           <div class="rbt-default-sidebar-wrapper">
                               <nav class="mainmenu-nav">
                                   <ul class="dashboard-mainmenu rbt-default-sidebar-list">
-                                      <li><a href="{{ route('video') }}"><img
+                                      @php
+                                          $videoId = request()->route('videoId');
+                                          $chatUuid = request()->route('chatUuid') ?? session('chat_uuid');
+                                      @endphp
+
+                                      <li><a
+                                              href="{{ route('chat.show', ['videoId' => $videoId, 'chatUuid' => $chatUuid]) }}"><img
                                                   src="{{ asset('assets/images/generator-icon/text.png') }}"
-                                                  alt="AI Generator"><span>Text Generator</span></a></li>
-                                      <li><a href="image-generator.html"><img
-                                                  src="{{ asset('assets/images/generator-icon/photo.png') }}"
-                                                  alt="AI Generator"><span>Image Generator</span>
-                                              <div class="rainbow-badge-card badge-sm ml--10">NEW</div>
-                                          </a></li>
-                                      <li><a href="code-generator.html"><img
+                                                  alt="AI Generator"><span>إسأل سنا</span></a></li>
+                                      <li><a href="{{ route('snaps.show', ['videoId' => $videoId]) }}"><img
                                                   src="{{ asset('assets/images/generator-icon/code-editor.png') }}"
-                                                  alt="AI Generator"><span>Code Generator</span></a></li>
-                                      <li><a href="image-editor.html"><img
+                                                  alt="AI Generator"><span>ملخصات</span></a></li>
+                                      <li><a href=""><img
+                                                  src="{{ asset('assets/images/generator-icon/photo.png') }}"
+                                                  alt="AI Generator"><span>إختبر فهمك</span>
+                                          </a></li>
+                                      {{-- <li><a href=""><img
                                                   src="{{ asset('assets/images/generator-icon/photo.png') }}"
                                                   alt="AI Generator"><span>Image Editor</span></a></li>
                                       <li><a href="vedio-generator.html"><img
@@ -30,13 +35,13 @@
                                                   src="{{ asset('assets/images/generator-icon/website-design.png') }}"
                                                   alt="AI Generator"><span>Website Generator</span>
                                               <div class="rainbow-badge-card badge-sm ml--10">PRO</div>
-                                          </a></li>
+                                          </a></li> --}}
                                   </ul>
                               </nav>
 
                               <div class="rbt-sm-separator"></div>
 
-                              <nav class="mainmenu-nav">
+                              {{-- <nav class="mainmenu-nav">
                                   <ul class="dashboard-mainmenu rbt-default-sidebar-list">
                                       <li class="has-submenu"><a class="collapse-btn collapsed"
                                               data-bs-toggle="collapse" href="text-generator.html#collapseExample"
@@ -102,7 +107,7 @@
                                                   class="fa-sharp fa-regular fa-briefcase"></i><span>Terms &
                                                   Policy</span></a></li>
                                   </ul>
-                              </nav>
+                              </nav> --}}
                           </div>
                       </div>
                   </div>

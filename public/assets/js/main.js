@@ -753,34 +753,34 @@ function generateAutoReply() {
     return `AiWave: I'm a dynamic chat bot!`;
   }
 
-  function sendMessage() {
-    const txtarea = document.getElementById('txtarea');
-    const chatContainer = document.getElementById('chatContainer');
-    let welcomeMessageIndex = 0;
+//   function sendMessage() {
+//     const txtarea = document.getElementById('txtarea');
+//     const chatContainer = document.getElementById('chatContainer');
+//     let welcomeMessageIndex = 0;
 
-    const welcomeMessages = [
-      "Hello! How can I help you today?",
-      "Welcome to our chat! Feel free to ask any questions."
-    ];
+//     const welcomeMessages = [
+//       "Hello! How can I help you today?",
+//       "Welcome to our chat! Feel free to ask any questions."
+//     ];
 
-    const userMessage = txtarea.value.trim();
-    if (userMessage === '') return;
+//     const userMessage = txtarea.value.trim();
+//     if (userMessage === '') return;
 
-    const userMessageElement = createEditableMessage('You', userMessage, 'author-speech', 'assets/images/team/team-01sm.jpg');
-    appendMessage(userMessageElement);
+//     const userMessageElement = createEditableMessage('You', userMessage, 'author-speech', 'assets/images/team/team-01sm.jpg');
+//     appendMessage(userMessageElement);
 
-    if (welcomeMessageIndex < welcomeMessages.length) {
-      const welcomeMessageElement = createMessageWithReactions('AiWave', welcomeMessages[welcomeMessageIndex], 'ai-speech', 'assets/images/team/avater.png');
-      appendMessage(welcomeMessageElement);
-      welcomeMessageIndex++;
-    } else {
-      const autoReply = generateAutoReply();
-      const autoReplyElement = createMessageWithReactions('AiWave', autoReply, 'ai-speech', 'assets/images/team/avater.png');
-      appendMessage(autoReplyElement);
-    }
+//     if (welcomeMessageIndex < welcomeMessages.length) {
+//       const welcomeMessageElement = createMessageWithReactions('AiWave', welcomeMessages[welcomeMessageIndex], 'ai-speech', 'assets/images/team/avater.png');
+//       appendMessage(welcomeMessageElement);
+//       welcomeMessageIndex++;
+//     } else {
+//       const autoReply = generateAutoReply();
+//       const autoReplyElement = createMessageWithReactions('AiWave', autoReply, 'ai-speech', 'assets/images/team/avater.png');
+//       appendMessage(autoReplyElement);
+//     }
 
-    txtarea.value = '';
-  }
+//     txtarea.value = '';
+//   }
 
   function createEditableMessage(title, message, speechClass, imgSrc) {
     const messageElement = createMessageElement(title, message, speechClass, imgSrc, true);
