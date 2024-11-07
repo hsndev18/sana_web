@@ -15,6 +15,9 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/logo/favicon.png') }}">
     <!-- CSS ============================================ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/fontawesome-all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/feature.css') }}">
@@ -24,6 +27,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap-select.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/prism.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
 
     <!-- END CSS ======================================== -->
 

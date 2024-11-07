@@ -8,7 +8,7 @@
                     </div>
                     <div class="logo">
                         <a href="index.html">
-                            <img class="logo-light" src="{{ asset('assets/images/logo/logo.png')}}" alt="ChatBot Logo">
+                            <img class="logo-light" src="{{ asset('assets/images/logo/logo.svg')}}" alt="ChatBot Logo">
                         </a>
                     </div>
                 </div>
@@ -391,7 +391,7 @@
         <div class="header-top">
             <div class="logo">
                 <a href="index.html">
-                    <img class="logo-light" src="{{ asset('assets/images/logo/logo.png')}}" alt="ChatBot Logo">
+                    <img class="logo-light" src="{{ asset('assets/images/logo/logo.svg')}}" alt="ChatBot Logo">
                 </a>
             </div>
             <div class="close-menu">
@@ -736,10 +736,5 @@
             </div>
         </div>
 
-        <!-- Start Header Btn  -->
-        <div class="header-btn d-block d-md-none">
-            <a class="btn-default @@btnClass" target="_blank" href="text-generator.html">Get Started Free</a>
-        </div>
-        <!-- End Header Btn  -->
     </div>
 </div>

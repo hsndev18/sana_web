@@ -1,3 +1,4 @@
+{{--
      <!-- Start Header Top Area  -->
      <div class="header-top-news bg-image1">
          <div class="wrapper">
@@ -27,3 +28,4 @@
          </div>
      </div>
      <!-- End Header Top Area  -->
+--}}
