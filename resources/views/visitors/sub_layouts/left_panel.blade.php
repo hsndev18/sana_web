@@ -19,7 +19,7 @@
                                           <li><a href="{{ route('snaps.show', ['videoId' => $videoId]) }}"><img
                                                       src="{{ asset('assets/images/generator-icon/code-editor.png') }}"
                                                       alt="AI Generator"><span>ملخصات</span></a></li>
-                                          <li><a href=""><img
+                                          <li><a href="{{ route('exam.show', ['videoId' => $videoId]) }}"><img
                                                       src="{{ asset('assets/images/generator-icon/photo.png') }}"
                                                       alt="AI Generator"><span>إختبر فهمك</span>
                                               </a></li>
