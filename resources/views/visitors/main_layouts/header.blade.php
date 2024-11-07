@@ -4,7 +4,7 @@
                 <div class="row align-items-center row--0">
                     <div class="col-lg-2 col-md-6 col-6">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="{{ route('landing') }}">
                                 <img class="logo-light" src="{{ asset('assets/images/logo/logo.png') }}" alt="ChatBot Logo">
                             </a>
                         </div>
@@ -13,7 +13,7 @@
                     <div class="col-lg-8 d-none d-lg-block">
                         <nav class="mainmenu-nav d-none d-lg-flex justify-content-center">
                             <ul class="mainmenu">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="{{ route('landing') }}">Home</a></li>
                                 <li class="has-dropdown has-menu-child-item position-relative"><a
                                         href="index.html#">Tools <i class="fa-regular fa-chevron-down"></i></a>
                                     <ul class="submenu">

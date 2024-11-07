@@ -21,4 +21,9 @@ class Question extends Model
     {
         return $this->morphTo('questionable', 'questionable_type', 'questionable_id');
     }
+
+    public function answers()
+    {
+        return $this->hasMany(Answer::class);
+    }
 }

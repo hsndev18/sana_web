@@ -35,18 +35,18 @@
 <body>
     <main class="page-wrapper">
 
-        @include('visitors.layouts.top_header')
+        @include('visitors.main_layouts.top_header')
 
-        @include('visitors.layouts.header')
+        @include('visitors.main_layouts.header')
 
-        @include('visitors.layouts.preloader')
+        @include('visitors.main_layouts.preloader')
 
         @yield('content')
 
-        @include('visitors.layouts.footer')
+        @include('visitors.main_layouts.footer')
     </main>
 
-    @include('visitors.layouts.scripts')
+    @include('visitors.main_layouts.scripts')
 </body>
 
 </html>
