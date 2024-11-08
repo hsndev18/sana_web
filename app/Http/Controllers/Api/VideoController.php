@@ -25,6 +25,8 @@ class VideoController extends Controller
         $video->update([
             'status' => $request->status, // completed
             'transcription' => $request->transcript,
+            'title' => $request->title,
+            'duration' => $request->duration,
         ]);
 
         if ($request->status == VideoStatus::COMPLETED->value) {

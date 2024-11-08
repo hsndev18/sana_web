@@ -1,12 +1,9 @@
 <?php
 
-use App\Models\Video;
-use App\Jobs\GenerateSnap;
-use App\Enums\Status\VideoStatus;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Visitors\LandingController;
-use Illuminate\Support\Facades\Http;
 
 Route::get('/', [LandingController::class, 'index'])->name('landing');
 
@@ -18,23 +15,3 @@ Route::get('videos/{videoId}/exams', [LandingController::class, 'showExam'])->na
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-// Route::get('test', function () {
-//     $video = Video::where('video_id', "TzimDCGMisQ")->firstOrFail();
-
-//     $processingEndpoint = (config('services.python_api.endpoints.generate_exam'))();
-
-//     $response = Http::withHeaders([
-//         'Authorization' => config('services.python_api.key'),
-//     ])->asForm()->post($processingEndpoint, [
-//         'namespace_id' => $video->video_id,
-//         'namespace_type' => 'video',
-//         'transcript' => $video->transcription,
-//     ]);
-
-//     return response()->json([
-//         'status' => 'success',
-//         'message' => 'Video updated successfully',
-//     ]);
-// });
