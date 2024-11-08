@@ -256,8 +256,8 @@
                                         <br>
                                         <li class="catagory-meta"><a href="#">اخصائي مشاريع</a></li>
                                     </ul>
-                                    <h4 class="title"><a href="https://www.linkedin.com/in/ibrahim-alnabhan-22b034212">م. ابراهيم النبهان</a></h4>
-                                    <a class="btn-read-more border-transparent" href="#">
+                                    <h4 class="title"><a href="#">م. ابراهيم النبهان</a></h4>
+                                    <a class="btn-read-more border-transparent" href="https://www.linkedin.com/in/ibrahim-alnabhan-22b034212">
                                         <span>اللينكد أن <i class="fa-sharp fa-regular fa-arrow-left"></i></span>
                                     </a>
                                 </div>
@@ -277,8 +277,8 @@
                                         <li class="catagory-meta"><a href="#">مهندس برمجيات</a></li>
                                         <li class="catagory-meta"><a href="#">ماجستير ذكاء اصطناعي</a></li>
                                     </ul>
-                                    <h4 class="title"><a href="https://www.linkedin.com/in/hasan-alshikh">م. حسن الشيخ</a></h4>
-                                    <a class="btn-read-more border-transparent" href="#">
+                                    <h4 class="title"><a href="#">م. حسن الشيخ</a></h4>
+                                    <a class="btn-read-more border-transparent" href="https://www.linkedin.com/in/hasan-alshikh">
                                         <span>اللينكد أن <i class="fa-sharp fa-regular fa-arrow-left"></i></span>
                                     </a>
                                 </div>
