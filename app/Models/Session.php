@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Session extends Model
 {
@@ -24,4 +25,15 @@ class Session extends Model
      * @var bool
      */
     public $incrementing = false;
+
+
+    public function chats(): HasMany
+    {
+        return $this->hasMany(Chat::class);
+    }
+
+    public function scopeSessionId($query, $sessionId)
+    {
+        return $query->where('id', $sessionId);
+    }
 }

@@ -22,26 +22,8 @@ class LandingController extends Controller
 
     public function showSnaps($videoId)
     {
-        // get chat for video with checking the current session id 
-        $chat = Chat::where('session_id', session()->getId())
-            ->where('chatable_type', Video::class)
-            ->where('chatable_id', $videoId)
-            ->first();
 
-        if (!$chat) {
-            $chat = Chat::firstOrCreate(
-                [
-                    'chatable_type' => Video::class,
-                    'chatable_id' => $videoId,
-                    'session_id' => session()->getId(),
-                ]
-            );
-        }
-
-        $chatUuid = $chat->uuid;
-        // save in seesion 
-        session()->put('chat_uuid', $chatUuid);
-        return view('visitors.snaps', compact('videoId', 'chatUuid'));
+        return view('visitors.snaps', compact('videoId'));
     }
 
     public function showChatLoading($videoId)

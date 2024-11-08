@@ -24,6 +24,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap-select.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/prism.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <!-- END CSS ======================================== -->
 
@@ -32,15 +36,13 @@
     <!-- END: Custom Links For Individual Page-->
 </head>
 
-<body>
+<body class="sub-layout">
     <main class="page-wrapper rbt-dashboard-page">
         <div class="rbt-panel-wrapper">
 
             @include('visitors.sub_layouts.header')
 
             @include('visitors.sub_layouts.preloader')
-
-            @include('visitors.sub_layouts.left_panel')
 
             <!-- Main content -->
             <div class="rbt-main-content">
@@ -354,6 +356,7 @@
         </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     @include('visitors.sub_layouts.footer')
     @include('visitors.sub_layouts.scripts')
 </body>

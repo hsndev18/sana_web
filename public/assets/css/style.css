@@ -16229,9 +16229,6 @@ img {
     background: #0e0c15;
     border: 0;
     height: 100%;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 @media only screen and (max-width: 767px) {
     .rainbow-pricing.style-aiwave .pricing-table-inner {
@@ -21953,7 +21950,7 @@ body.active-light-mode
     height: auto;
     margin-bottom: 120px;
     margin-left: auto;
-    margin-top: 80px;
+    margin-top: 150px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .rbt-main-content {
@@ -22726,14 +22723,14 @@ body.active-light-mode
     outline: 0;
     display: block;
     width: 100%;
-    padding: 16px 130px 16px 60px;
+    padding: 16px 20px 16px 60px;
     font-size: 16px;
     line-height: 22px;
     max-height: 200px;
 }
 @media only screen and (max-width: 479px) {
     .rbt-static-bar .new-chat-form textarea {
-        padding: 12px 100px 35px 40px;
+        padding: 12px 20px 35px 40px;
     }
 }
 .rbt-static-bar .new-chat-form .left-icons {
@@ -22810,6 +22807,8 @@ body.active-light-mode
 }
 .rbt-static-bar .new-chat-form .form-icon.icon-send {
     background: transparent;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
     color: var(--color-body);
     border: none;
 }
@@ -24150,6 +24149,25 @@ body.active-light-mode
     height: 210px;
     animation: rt 7s infinite linear;
     box-shadow: 0 0 3px 0 magenta, inset 0 0 10px 0 magenta;
+}
+
+
+body.sub-layout {
+    background: linear-gradient(101deg, rgba(60, 18, 98, 0.85), rgba(66, 1, 94, 0.85), rgba(119, 29, 85, 0.85), rgba(112, 1, 112, 0.85));
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @keyframes rt {

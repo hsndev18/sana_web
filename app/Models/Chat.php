@@ -57,4 +57,9 @@ class Chat extends Model
     {
         return $this->morphTo('chatable', 'chatable_type', 'chatable_id');
     }
+
+    public function scopeVideoId($query, $videoId)
+    {
+        return $query->where('chatable_type', 'App\Models\Video')->where('chatable_id', $videoId);
+    }
 }
