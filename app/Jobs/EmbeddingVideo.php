@@ -33,16 +33,10 @@ class EmbeddingVideo implements ShouldQueue
             ->timeout(9999999)
             ->get($processingEndpoint);
 
-        // if ($response->failed()) {
-        //     Video::where('video_id', $this->videoId)->update([
-        //         'status' => VideoStatus::FAILED
-        //     ]);
-        // } elseif ($response->successful()) {
-        //     Video::where('video_id', $this->videoId)->update([
-        //         'status' => VideoStatus::DOWNLOADED
-        //     ]);
-        // }
-
-
+        if ($response->failed()) {
+            Video::where('video_id', $this->videoId)->update([
+                'status' => VideoStatus::FAILED
+            ]);
+        }
     }
 }
