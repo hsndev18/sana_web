@@ -44,6 +44,16 @@
                                         {{ $message->content }}
                                     @endif
                                 </div>
+                                @if($loop->last && $message->is_ai)
+                                    <div class="reaction-section">
+                                        <div class="btn-grp">
+                                            <div class="right-side-btn">
+                                                <button data-bs-toggle="modal" data-bs-target="#likeModal" class="react-btn btn-default btn-small btn-border"><i class="fa-sharp fa-regular fa-thumbs-up"></i></button>
+                                                <button data-bs-toggle="modal" data-bs-target="#dislikeModal" class="react-btn btn-default btn-small btn-border"><i class="fa-sharp fa-regular fa-thumbs-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endif
                             </div>
                         </div>
                     </div>
