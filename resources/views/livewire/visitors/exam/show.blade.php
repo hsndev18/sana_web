@@ -39,7 +39,12 @@
                 </ul>
 
                 <div class="row">
-                    <div class="col-12 d-flex justify-content-end mt-3">
+                    <div class="col-8 d-flex justify-content-start mt-3">
+                        @error('answers.' . $question->id)
+                        <div class="text-danger">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="col-3 d-flex justify-content-end mt-3">
                         <button wire:click="save()" class="btn btn-default"
                             wire:loading.attr="disabled">
                             <span class="align-middle d-sm-inline-block me-sm-1">
