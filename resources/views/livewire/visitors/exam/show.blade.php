@@ -21,7 +21,7 @@
                             {{ $question->content }}
                         </h6>
                         @foreach ($question->answers as $answerIndex => $answer)
-                            <div class="form-check multiAnswer exam-answer @if($examSubmited && $answers[$question->id] == $answer->id && $answer->is_correct) correct-answer @elseif($examSubmited && $answers[$question->id] == $answer->id && !$answer->is_correct) wrong-answer @endif">
+                            <div class="form-check multiAnswer exam-answer @if(isset($answers[$question->id]) && $examSubmited && $answers[$question->id] == $answer->id && $answer->is_correct) correct-answer @elseif(isset($answers[$question->id]) && $examSubmited && $answers[$question->id] == $answer->id && !$answer->is_correct) wrong-answer @endif">
                                 <input type="radio"
                                     class="form-check-input @error('answers.' . $question->id) is-invalid @enderror"
                                     id="answer.{{ $index }}.{{ $answerIndex }}"
