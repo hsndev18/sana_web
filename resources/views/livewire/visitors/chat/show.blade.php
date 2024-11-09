@@ -48,8 +48,8 @@
                                     <div class="reaction-section">
                                         <div class="btn-grp justify-content-end">
                                             <div class="right-side-btn">
-                                                <button data-bs-toggle="modal" onclick='Swal.fire({ title: "تم بنجاح!", text: "تم تقييم الرد بنجاح!", icon: "success" });' data-bs-target="#likeModal" class="react-btn btn-default btn-small btn-border"><i class="fa-sharp fa-regular fa-thumbs-up"></i></button>
-                                                <button data-bs-toggle="modal" onclick='Swal.fire({ title: "تم بنجاح!", text: "تم تقييم الرد بنجاح!", icon: "success" });' data-bs-target="#dislikeModal" class="react-btn btn-default btn-small btn-border"><i class="fa-sharp fa-regular fa-thumbs-down"></i></button>
+                                                <button data-bs-toggle="modal" onclick='Swal.fire({ title: "تم بنجاح!", text: "تم تقييم الرد بنجاح!", icon: "success" });'  class="react-btn btn-default btn-small btn-border"><i class="fa-sharp fa-regular fa-thumbs-up"></i></button>
+                                                <button data-bs-toggle="modal" onclick='Swal.fire({ title: "تم بنجاح!", text: "تم تقييم الرد بنجاح!", icon: "success" });' class="react-btn btn-default btn-small btn-border"><i class="fa-sharp fa-regular fa-thumbs-down"></i></button>
                                             </div>
                                         </div>
                                     </div>
