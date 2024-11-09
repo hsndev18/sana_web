@@ -9305,14 +9305,14 @@ input[type="radio"] ~ label {
     cursor: pointer;
     margin-bottom: 0;
     padding: 2px 0;
-    padding-left: 30px;
+    padding-right: 30px;
 }
 input[type="checkbox"] ~ label::before,
 input[type="radio"] ~ label::before {
     content: " ";
     position: absolute;
     top: 6px;
-    left: 0;
+    right: 0;
     width: 18px;
     height: 18px;
     background-color: var(--color-blackest);
@@ -9352,7 +9352,7 @@ input[type="radio"] ~ label::before {
 input[type="radio"] ~ label::after {
     width: 8px;
     height: 8px;
-    left: 3px;
+    right: 5px;
     background: var(--color-white);
     border-radius: 50%;
 }
@@ -9380,7 +9380,7 @@ input[type="radio"] ~ label::after {
     box-shadow: none;
 }
 .form-switch input[type="checkbox"] ~ label {
-    padding-left: 10px;
+    padding-right: 10px;
 }
 .form-switch input[type="checkbox"] ~ label::before,
 .form-switch input[type="checkbox"] ~ label::after {
@@ -16947,7 +16947,7 @@ img.mfp-img {
 .rainbow-brand-area .bg-shape-left {
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 0;
     transform: translateY(-50%);
     z-index: -3;
 }
@@ -19271,7 +19271,6 @@ iframe {
     z-index: 5;
 }
 .footer-style-3 .footer-top {
-    background: var(--color-blackest);
     padding: 80px 0;
 }
 @media only screen and (max-width: 767px) {
@@ -21982,7 +21981,7 @@ body.active-light-mode
 
 .chat-box-section {
     background: var(--color-dark);
-    border-radius: var(--radius) var(--radius) 0 0;
+    border-radius: var(--radius);
     overflow: hidden;
 }
 .chat-box-section .chat-box-list {
@@ -22106,7 +22105,6 @@ body.active-light-mode
 }
 
 .chat-content {
-    max-width: calc(100% - 60px);
     width: 100%;
     transition: 0.4s;
 }
@@ -22643,7 +22641,7 @@ body.active-light-mode
     bottom: 0;
     padding: 20px 15px;
     background-color: var(--color-dark);
-    box-shadow: 0px -40px 55px -20px rgb(7, 7, 16);
+    box-shadow: 0px -20px 45px -20px rgb(7, 7, 16);
     transition: all 0.4s ease;
     text-align: center;
 }

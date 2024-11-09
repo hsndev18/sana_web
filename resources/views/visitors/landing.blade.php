@@ -210,7 +210,7 @@
                     </div>
                 </div>
 
-                <div class="row" id="whyus">
+                <div class="row mt-5" id="ourteam">
                     <div class="col-lg-12">
                         <div class="section-title text-center pb--60" data-sal="slide-up" data-sal-duration="700"
                              data-sal-delay="100">
@@ -231,7 +231,7 @@
                                     </a>
                                 </div>
                                 <div class="content">
-                                    <ul class="rainbow-meta-list">
+                                    <ul class="rainbow-meta-list justify-content-center">
                                         <li class="catagory-meta"><a href="#">أستاذ مساعد في الذكاء الاصطناعي</a></li>
                                         <li class="catagory-meta"><a href="#">رئيس قسم علوم الحاسب</a></li>
                                     </ul>
