@@ -19,6 +19,8 @@ class Show extends Component
     public $questions;
     public $answers = [];
 
+    public $examSubmited = false;
+
     public function mount($videoId)
     {
         $this->videoId = $videoId;
@@ -84,16 +86,14 @@ class Show extends Component
             }
 
             // Calculate grade
-            if ($totalQuestions > 0) {
-                $examAttempt->result = ($totalCorrect / $totalQuestions) * 100;
-            }
             $examAttempt->save();
 
-            $this->alert('success', 'Done, Your Grade is : ' . round($examAttempt->result) . '/' . 100.00, [
-                'position' => 'center',
+            $this->alert('success', 'Done, Your Grade is : ' . $totalCorrect . '/' . $totalQuestions, [
+                'position' => 'botton-end',
                 'timer' => 3000,
             ]);
 
+            $this->examSubmited = true;
 
             DB::commit();
         } catch (\Exception $e) {
