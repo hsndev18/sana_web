@@ -46,9 +46,8 @@ class Show extends Component
     {
 
         $this->validate([
+            'answers' => 'required|array|size:' . count($this->questions),
             'answers.*' => 'required|exists:answers,id',
-            'answers' => 'required|array',
-
         ], [
             'answers.*.required' => __('يجب اختيار الإجابة'),
             'answers.*.exists' => __('الإجابة المختارة غير صحيحة'),
