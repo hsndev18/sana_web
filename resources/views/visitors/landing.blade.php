@@ -91,7 +91,7 @@
                                         type="button" role="tab" aria-controls="photo-generate"
                                         aria-selected="false"><span class="generator-icon"><img
                                             src="{{ asset('assets/images/icons/code-g.png') }}"
-                                            alt="Vedio Generator Icon">اختبر فهمك</span><span
+                                            alt="Vedio Generator Icon">اختبر فهمك مع سنا</span><span
                                         class="border-bottom-style"></span></button>
                             </li>
                         </ul>
