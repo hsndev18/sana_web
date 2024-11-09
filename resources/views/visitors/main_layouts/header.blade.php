@@ -20,7 +20,7 @@
                                 <li class="with-megamenu has-menu-child-item"><a href="#whyus">لماذا نحن؟ </a>
                                 </li>
                                 <li><a href="#">طريقة الإستخدام</a></li>
-                                <li><a href="#">أتصل بنا</a></li>
+                                <li><a href="#ourteam">فريقنا</a></li>
                             </ul>
 
                         </nav>

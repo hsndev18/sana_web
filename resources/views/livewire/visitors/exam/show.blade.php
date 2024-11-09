@@ -39,11 +39,13 @@
                 </ul>
 
                 <div class="row">
-                    <div class="col-12 d-flex justify-content-between mt-3">
-                        <button wire:click="save()" class="btn btn-primary btn-next waves-effect waves-light"
+                    <div class="col-12 d-flex justify-content-end mt-3">
+                        <button wire:click="save()" class="btn btn-default"
                             wire:loading.attr="disabled">
                             <span class="align-middle d-sm-inline-block me-sm-1">
-                                {{ __('تسليم') }}</span>
+                                {{ __('تسليم') }}
+                            </span>
+                            <i class="fa-regular fa-arrow-left me-3"></i>
                         </button>
                     </div>
                 </div>
