@@ -5,7 +5,7 @@
                 <div class="icon">
                     <img src="{{ asset('assets/images/icons/document-file.png') }}" alt="">
                 </div>
-                <h6 class="title">اختبر فهمك للدرس التالي: <p class="mb--20"> <a
+                <h6 class="title">اختبر فهمك للدرس التالي: <p class="mb-0"> <a
                             href="https://www.youtube.com/watch?v={{ $video->video_id }}"
                             target="_blank">https://www.youtube.com/watch?v={{ $video->video_id }}</a></p>
                 </h6>
@@ -21,7 +21,7 @@
                             {{ $question->content }}
                         </h6>
                         @foreach ($question->answers as $answerIndex => $answer)
-                            <div class="form-check multiAnswer">
+                            <div class="form-check multiAnswer exam-answer @if($examSubmited && $answers[$question->id] == $answer->id && $answer->is_correct) correct-answer @elseif($examSubmited && $answers[$question->id] == $answer->id && !$answer->is_correct) wrong-answer @endif">
                                 <input type="radio"
                                     class="form-check-input @error('answers.' . $question->id) is-invalid @enderror"
                                     id="answer.{{ $index }}.{{ $answerIndex }}"
