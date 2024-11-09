@@ -21,7 +21,8 @@
                             {{ $question->content }}
                         </h6>
                         @foreach ($question->answers as $answerIndex => $answer)
-                            <div class="form-check multiAnswer exam-answer @if(isset($answers[$question->id]) && $examSubmited && $answers[$question->id] == $answer->id && $answer->is_correct) correct-answer @elseif(isset($answers[$question->id]) && $examSubmited && $answers[$question->id] == $answer->id && !$answer->is_correct) wrong-answer @endif">
+                            <div
+                                class="form-check multiAnswer exam-answer @if (isset($answers[$question->id]) && $examSubmited && $answers[$question->id] == $answer->id && $answer->is_correct) correct-answer @elseif(isset($answers[$question->id]) && $examSubmited && $answers[$question->id] == $answer->id && !$answer->is_correct) wrong-answer @endif">
                                 <input type="radio"
                                     class="form-check-input @error('answers.' . $question->id) is-invalid @enderror"
                                     id="answer.{{ $index }}.{{ $answerIndex }}"
@@ -40,13 +41,12 @@
 
                 <div class="row">
                     <div class="col-8 d-flex justify-content-start mt-3">
-                        @error('answers.' . $question->id)
-                        <div class="text-danger">{{ $message }}</div>
+                        @error('answers')
+                            <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="col-3 d-flex justify-content-end mt-3">
-                        <button wire:click="save()" class="btn btn-default"
-                            wire:loading.attr="disabled">
+                        <button wire:click="save()" class="btn btn-default" wire:loading.attr="disabled">
                             <span class="align-middle d-sm-inline-block me-sm-1">
                                 {{ __('تسليم') }}
                             </span>
