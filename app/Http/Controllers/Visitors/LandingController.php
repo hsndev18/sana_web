@@ -17,8 +17,43 @@ class LandingController extends Controller
 
     public function showChat($videoId, $chatUuid)
     {
-        return view('visitors.chat', compact('videoId', 'chatUuid'));
+        if ($chatUuid === 'create') {
+            return $this->createNewChat($videoId);
+        }
+
+        $chat = $this->getExistingChat($chatUuid);
+
+        if (!$chat) {
+            return redirect()->route('chat.show', ['videoId' => $videoId, 'chatUuid' => 'create']);
+        }
+
+        return view('visitors.chat', [
+            'videoId' => $videoId,
+            'chatUuid' => $chat->uuid,
+        ]);
     }
+
+    private function createNewChat($videoId)
+    {
+        $chat = Chat::create([
+            'chatable_type' => Video::class,
+            'chatable_id' => $videoId,
+            'session_id' => session()->getId(),
+        ]);
+
+        return redirect()->route('chat.show', [
+            'videoId' => $videoId,
+            'chatUuid' => $chat->uuid,
+        ]);
+    }
+
+    private function getExistingChat($chatUuid)
+    {
+        return Chat::where('uuid', $chatUuid)
+            ->where('session_id', session()->getId())
+            ->first();
+    }
+
 
     public function showSnaps($videoId)
     {

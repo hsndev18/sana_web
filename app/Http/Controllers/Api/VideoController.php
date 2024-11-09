@@ -54,7 +54,7 @@ class VideoController extends Controller
         $sentences = $snaps['sentences'] ?? [];
 
         if ($type == 'lesson') {
-            $namespace = Lesson::where('id', $namespace_id)->firstOrFail();
+            $namespace = Lesson::where('name', $namespace_id)->firstOrFail();
             $model = Lesson::class;
         } elseif ($type == 'video') {
             $namespace = Video::where('video_id', $namespace_id)->firstOrFail();
@@ -95,9 +95,8 @@ class VideoController extends Controller
         }
 
 
-        Log::info('Decoded questions:', $questions);
         if ($type == 'lesson') {
-            $namespace = Lesson::where('id', $namespace_id)->firstOrFail();
+            $namespace = Lesson::where('name', $namespace_id)->firstOrFail();
             $model = Lesson::class;
         } elseif ($type == 'video') {
             $namespace = Video::where('video_id', $namespace_id)->firstOrFail();
