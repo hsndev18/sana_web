@@ -89,7 +89,7 @@ class Show extends Component
             $examAttempt->save();
 
             $this->alert('success', 'Done, Your Grade is : ' . $totalCorrect . '/' . $totalQuestions, [
-                'position' => 'botton-end',
+                'position' => 'bottom-end',
                 'timer' => 3000,
             ]);
 
